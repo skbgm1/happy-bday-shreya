@@ -41,7 +41,7 @@ export default function PhotoGallery({ onNext }) {
                 </h1>
                 {photoScreenSubHeading && photoScreenSubHeading.trim().length !== 0 && <p className="text-xl text-purple-300">{photoScreenSubHeading} 📸</p>}
             </motion.div>
-
+            <motion.p className="mb-2 text-white/70 text-sm">(Swipe pics ➡️)</motion.p>
             {/* Cube Gallery */}
             <div className="w-full max-w-sm mx-auto">
                 <Swiper
@@ -62,7 +62,7 @@ export default function PhotoGallery({ onNext }) {
                             <Image
                                 fill
                                 sizes="400px"
-                                src={photo.src || "/placeholder.svg"}
+                                src={photo.src}
                                 alt={`Memory ${index + 1}`}
                                 className="w-full h-full object-cover rounded-xl"
                             />
